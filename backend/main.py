@@ -66,7 +66,7 @@ Return ONLY valid JSON in this exact format, no markdown, no extra text:
 }}"""
 
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-120b",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.3,
     )
@@ -89,7 +89,7 @@ Keep responses concise and clear."""
     messages.append({"role": "user", "content": data.message})
 
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-120b",
         messages=messages,
         temperature=0.5,
     )
